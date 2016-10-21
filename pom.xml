@@ -12,7 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<activiti.version>5.17.0</activiti.version>
+		<activiti.version>5.19.0.2</activiti.version>
 	</properties>
 
 	<parent>
@@ -38,25 +38,46 @@
 		</dependency>
 		<!-- TESTING DEPENDENCIES -->
 
+		<!-- ACTIVITI -->
 		<dependency>
 			<groupId>org.activiti</groupId>
-			<artifactId>spring-boot-starter-basic</artifactId>
+			<artifactId>activiti-spring-boot-starter-basic</artifactId>
 			<version>${activiti.version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.4.185</version>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-spring-boot-starter-actuator</artifactId>
+			<version>${activiti.version}</version>
 		</dependency>
-
-		<!-- Testing -->
+		
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-spring-boot-starter-rest-api</artifactId>
+			<version>${activiti.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-spring-boot-starter-jpa</artifactId>
+			<version>${activiti.version}</version>
+		</dependency>				
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- ACTIVITI -->
+
+		<!-- DATABASE -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.185</version>
+		</dependency>
+		<!-- DATABASE -->
+				
 		<dependency>
 			<groupId>org.subethamail</groupId>
 			<artifactId>subethasmtp-wiser</artifactId>
